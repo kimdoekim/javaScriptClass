@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="a()" style="width: 400px; height: 100px; font-size: 30px;"><strong>번호 뽑기</strong></button>
+    
+    <h3 id="result" style="font-size: 30px;"></h3>
+    
+    <script>
+        function a(){
+            let lottos = [];
+            let cnt = 0;
+            while(cnt < 6){
+                let number = parseInt(Math.random() * 45) + 1;
+                if (!lottos.includes(number)) {
+                    lottos.push(number);
+                    cnt++;
+                }
+            }
+            lottos.sort((a, b) => a - b);
+
+            alert(lottos);
+            document.querySelector("#result").innerHTML = "예상 번호는 " + lottos + " 입니다."
+        }
+
+
+    </script>
+
+</body>
+</html>

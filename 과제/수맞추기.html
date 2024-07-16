@@ -6,31 +6,36 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <button onclick="choose()"> 시작하기 </button>
 
     <script>
-        
-        let number  = parseInt(Math.random()*99 +1);
-        let cnt = 0;
-        while(1){
-            let anwser = parseInt(prompt("수를 맞춰보세요(1~100)"))    
-            if(anwser == number){
-                cnt++;
-                alert("정답입니다.");
-                break;
-            }else if(anwser<number){
-                cnt++;
-                alert("틀렸습니다. UP");
-                
-            }else{
-                cnt++;
-                alert("틀렸습니다. DOWN");
-                
+        function choose(){
+            let number  = parseInt(Math.random()*99 +1);
+            let cnt = 0;
+            while(1){
+                let anwser = parseInt(prompt("수를 맞춰보세요(1~100)"))    
+                if(isNaN(anwser)|anwser>100|anwser<1){
+                    alert("1~100 사이의 숫자를 입력하시오.");
+                    continue;
+                }
+                if(anwser == number){
+                    cnt++;
+                    alert("정답입니다.");
+                    break;
+                }else if(anwser<number){
+                    cnt++;
+                    alert("틀렸습니다. UP");
+                    
+                }else{
+                    cnt++;
+                    alert("틀렸습니다. DOWN");
+                    
+                }
             }
-        }
-        if(cnt<=3){
-            alert("맛있는 간식")
-        }
+            if(cnt<=3){
+                alert("맛있는 간식")
+            }
+         }
     </script>
 </body>
 </html>
