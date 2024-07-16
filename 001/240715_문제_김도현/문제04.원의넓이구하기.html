@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2> 원주 :원의 둘레  : 지름 (반지름*2) * 원주율 </h2>
+    <h2> 원의 넓이 :   반지름(세로) *  반지름*원주율 (  가로  )  => 원주율*반지름^2</h2>
+
+    <script>
+
+        /*
+       
+        원의 넓이 구하기 )   지름을 입력받아 원의 넓이를  구하기 
+         원주율:3.14   
+
+        입력 : 지름
+        출력 : 원의 넓이
+
+        처리과정:
+ 
+*/
+
+        let number = parseInt(prompt("지름을 입력하세요"));
+        let rad = number/2;
+        alert('원의 넓이는 '+rad*rad*3.14+'입니다.');
+    </script>
+    
+</body>
+</html>
