@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <h2> 1~10까지의 합 while</h2>
+    
+
+<div id="result"></div>
+
+<script>
+        
+
+    //1 2 3 4 5 6  7 8 9  10 <= 순번
+    //1+2+3+4+5+6+7+8+9+10 <=항
+
+    /*
+        입력 : x
+        출력 : 10까지 합 : sum
+        처리 : 항 : , 반복제어
+
+        처리과정
+        1.반복
+            -항을 구하기
+            -항을 누적한다
+        2. 항의 누적을 출력한다.
+        3. 종료
+
+    */
+
+    let sum= 0 ;
+    let i = 0;
+
+
+    while( i<10){
+        i++;
+        sum += i;
+    }
+    alert(sum);
+    document.querySelector("#result").innerHTML = sum;
+
+
+</script>
+
+</body>
+</html>

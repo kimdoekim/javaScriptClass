@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      
+// 1. 나이를 입력받아서  성인인지 판단하는 프로그램 작성하기 
+//     - 나이를 입력받는다.   prompt()
+//     - 나이를 판단한다  
+//     - 알림창에 정보를 출력한다. alert()
+ 
+    let age = prompt("나이를 입력하세요.");
+    if(age>19){
+        alert("성인입니다.");
+    }else{
+        alert("성인이 아닙니다.");
+    }
+
+// 2. 수를 입력받아 원하는 만큼 별 출력하기
+    let starNumber = prompt("출력하고 싶은 별의 개수를 입력하시오.")
+    for(let i =0 ; i<starNumber;i++){
+        document.writeln("* ");
+    }
+    document.write("<br>");
+// 3. 수를 입력받아 원하는 만큼 내이름 출력하기 
+    let name = prompt("이름을 입력하시오.")
+    let nameNumber = prompt("이름을 출력하고 싶은 횟수를 입력하시오.")
+    for(let j = 0; j <nameNumber; j++){
+        document.write(name+"<br>");
+    }
+    document.write("<br>");
+// 4.  점수를 입력받아 학점을 구하시오 ( 90점이상 A ,  80점 이상B , 나머지 F )
+    let score = prompt("점수를 입력하시오.")
+    if(score>=90){
+        document.write("A 학점입니다.")
+    }else if(score>=80){
+        document.write("B 학점입니다.")
+    }else{
+        document.write("F 학점입니다.")
+    }
+    document.write("<br>");
+// 5.  국어, 영어, 수학점수를 입력받아 평균을 출력하시오
+        let kor;
+        let eng;
+        let math;
+        
+        while(1){
+            kor = parseInt(prompt("국어 점수를 입력하시오"))
+            if(isNaN(kor)|kor<0|kor>100){
+            alert("0~100사이 입력되도록 하시오")
+            continue;
+         }
+         break;
+        }
+        while(1){
+            eng = parseInt(prompt("영어 점수를 입력하시오."))
+            if(isNaN(eng)|eng<0|eng>100){
+            alert("0~100사이 입력되도록 하시오")
+            continue;
+         }
+         break;
+        }
+        while(1){
+            math = parseInt(prompt('수학 점수를 입력하시오'))
+            if(isNaN(math)|math<0|math>100){
+            alert("0~100사이 입력되도록 하시오")
+            continue;
+         }
+         break;
+        }
+        let sum = kor+eng+math;
+        // let avg = sum/3
+        document.write("국어, 영어, 수학 점수의 평균은 "+avg+" 입니다.");
+        // alert("국어, 영어, 수학 점수의 평균은 "+avg+" 입니다.");
+// 6.  국어, 영어점수 입력 받아  모두 90점 이상이면 장학금 지급 출력
+        if(kor>=90 && eng >=90){
+            document.write("국어, 영어 점수가 모두 90점 이상이여서 장학금");
+        }else{
+            document.write("국어, 영어 점수가 하나라도 90점 이하이여서 장학금아님");
+        }
+        document.write("<br>");
+// 7.  카드사용금액을 입력받아  50만원이상  "vvip"  30이상이면 "vip"  나머지 "bronze" 출력
+        let card = prompt("카드사용금액")
+        if(card >=50){
+            document.write("vvip")
+        }else if(card >= 30){
+            document.write("vip")
+        }else{
+            document.write("bronze")
+        }
+    </script>
+</body>
+</html>

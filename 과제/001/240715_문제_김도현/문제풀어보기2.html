@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+
+      // 1.prompt 사용자입력 
+      // 점수를 입력받아서 학점을 출력해 봅시다
+      let score = prompt("점수를 입력하시오.")
+      if (score >= 90) {
+            document.write("A 학점입니다.")
+         } else if (score >= 80) {
+            document.write("B 학점입니다.")
+         } else {
+            document.write("F 학점입니다.")
+         }
+      document.write("<br><hr>");
+
+      // 2. 1번 ) 1번 문제를  3번 반복하기 
+      let score2 = 0;
+         for(let i = 0; i<3; i++){
+            score2 = prompt("점수를 입력하시오.")
+               if(score2>=90){
+                  document.write("A 학점입니다.")
+               }else if(score2>=80){
+                  document.write("B 학점입니다.")
+               }else{
+                  document.write("F 학점입니다.")
+               }
+            document.write("<br>");
+         }
+         document.write("<hr>");
+         
+      //    2번 ) 1번 문제를  점수가 음수가 음력되기 전까지 반복하기
+
+      // 1.
+      // 점수를입력받는다
+      // 점수에 대한 학점을 구한다
+      // 점수 출력
+      // 2.1
+      // 반복 (3번)
+      // -점수를입력받는다
+      // -점수에 대한 학점을 구한다
+      // -점수 출력
+      // 2.2
+      // 반복 (음수입력되기전까지)
+      // -점수를입력받는다
+      // -점수에 대한 학점을 구한다
+      // -점수 출력
+      let score2_2 = 0;
+      while(score <0){
+         score2 = prompt("점수를 입력하시오.")
+         if(score2>=90){
+            document.write("A 학점입니다.")
+         }else if(score2>=80){
+             document.write("B 학점입니다.")
+         }else{
+             document.write("F 학점입니다.")
+         }
+         document.write("<br><hr>");
+      }
+
+      // 3.  구구단 ( 2단 출력) 
+      //    - console.log( ) 
+      //    - document.write()
+      let gugudan = 2
+      for (let j = 1; j <=9 ; j++){
+         console.log(gugudan +" x "+ j + " = " + gugudan*j);
+         document.write(gugudan+ " x "+ j + " = " + gugudan*j + "<br>");
+      }
+      document.write("<hr>")
+      // 4.  2~5단까지 출력하기 ( 2~5단)   
+      for(let k = 2; k<=5; k++){
+         for(let l =1 ; l <=9; l++){
+            console.log(k +" x "+ l + " = " + k*l);
+            document.write(k+ " x "+ l + " = " + k*l + "<br>");
+         }
+         document.write("<hr>")
+      }
+      // 5. 별출력  (단 *별 한개를 이용하기)
+      //    1)*
+         document.write("*")
+         document.write("<hr>")
+      //    2) *****
+         document.write("*****<hr>")
+      //    3) *****
+      //       *****
+      //       *****
+         document.write("*<br>**<br>***<hr>")
+      //    4) *
+      //       **
+      //       ***
+         document.write("***<br>**<br>*<hr>")
+      //    5) ***
+      //       **
+      //       *
+
+      // 6. 구구단 while, do~ while  해결하기
+         let dan2 = 1;
+         let guguNum = 1;
+         while(dan2<10){
+            document.write("2 x "+ dan2 +" = " + 2*dan2+"<br>")
+            dan2++;
+         }
+         document.write("<hr>");
+         do{
+            document.write("2 x "+ guguNum +" = " + 2*guguNum+"<br>")
+            guguNum++;
+         }while(guguNum<10)
+    </script>
+</body>
+</html>

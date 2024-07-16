@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  
+<h2> 2단~5 출력 </h2>
+
+<script>
+    document.write("<h3>2단 </h3>");
+    for( let i=1; i<=9; i++){
+            document.write( 2* i  +"<br>");
+    }
+    
+    document.write("<h3>3단 </h3>");
+    for( let i=1; i<=9; i++){  // i+=2
+         document.write( 3* i  +"<br>");
+    }
+    
+    document.write("<h3>4단 </h3>");
+    for( let i=1 ; i<=9 ; i++){
+        document.write( 4* i +"<br>") ;    
+    }
+    
+    document.write("<h3>5단 </h3>");
+    for( let i=1; i<=9 ; i++){
+        document.write( 5*i +"<br>");
+    }
+</script>
+
+
+ 
+    <h2> 2단~5 출력 반복문 사용</h2>
+    <script>
+
+        for( let i=2; i<=5; i++){   //4번 반복한다
+                 
+            document.write( i+"단 출력 <br>");
+            for( let j=1; j<=9;  j++){
+                document.write(  i*j +"<br>");
+            }
+
+        } 
+
+</script>
+    
+</body>
+</html>

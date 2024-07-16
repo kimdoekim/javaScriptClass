@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        
+        let number  = parseInt(Math.random()*99 +1);
+        let cnt = 0;
+        while(1){
+            let anwser = parseInt(prompt("수를 맞춰보세요(1~100)"))    
+            if(anwser == number){
+                cnt++;
+                alert("정답입니다.");
+                break;
+            }else if(anwser<number){
+                cnt++;
+                alert("틀렸습니다. UP");
+                
+            }else{
+                cnt++;
+                alert("틀렸습니다. DOWN");
+                
+            }
+        }
+        if(cnt<=3){
+            alert("맛있는 간식")
+        }
+    </script>
+</body>
+</html>
