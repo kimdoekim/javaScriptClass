@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sel button{
+            height: 50px;
+            width: 100px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="sel">
+        <button onclick="game(1)">가위</button>
+        <button onclick="game(2)">바위</button>
+        <button onclick="game(3)">보</button>
+    </div>
+    <hr>
+    <div id="result"></div>
+
+    <script>
+        function game(sel){
+            let comA = parseInt(Math.random()*3)+1
+            if(sel == comA){
+                document.getElementById('result').innerHTML= "무승부";
+            }else if((sel == 1 && comA ==2)|(sel == 2 && comA == 3)|(sel == 3 && comA == 1)){
+                document.getElementById('result').innerHTML = "사용자패배";
+                alert("사용자의 패배");
+            }else{
+                document.getElementById('result').innerHTML = '사용자승리'
+                alert("사용자의 승리")
+            }
+        }
+    </script>
+</body>
+</html>
