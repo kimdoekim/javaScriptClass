@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<style>
+    .swiper {
+  width: 630px;
+  height: 300px;
+  text-align: center;
+  
+}
+.swiper-slide img{
+    width: 200px;
+    height: 300px;
+    border: 1px solid gray;
+}
+.swiper-button-prev, .swiper-button-next{
+    color: rgba(17, 0, 255, 0.5);
+    background-color: rgba(128, 128, 128, 0.5);
+}
+</style>
+</head>
+<body>
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide"><a href="https://product.kyobobook.co.kr/detail/S000213641159"><img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791167902573.jpg"></a></div>
+          <div class="swiper-slide"><a href="https://product.kyobobook.co.kr/detail/S000213540050"><img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791193262184.jpg"></a></div>
+          <div class="swiper-slide"><a href="https://product.kyobobook.co.kr/detail/S000212997171"><img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791161571768.jpg"></a></div>
+          <div class="swiper-slide"><a href="https://product.kyobobook.co.kr/detail/S000211513068"><img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791130646381.jpg"></a></div>
+          <div class="swiper-slide"><a href="https://product.kyobobook.co.kr/detail/S000213800371"><img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791170611561.jpg"></a></div>
+          
+        </div>
+        <!-- If we need pagination -->
+        <!-- <div class="swiper-pagination"></div> -->
+      
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      
+        <!-- If we need scrollbar -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+      </div>
+
+
+      <script>
+        const swiper = new Swiper('.swiper', {
+      // Optional parameters
+    //   direction: 'vertical',
+      slidesPerView:3,
+      spaceBetween:30,
+      centeredSlides:true,
+      loop: true,
+      
+    
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    
+      // And if we need scrollbar
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+    });
+    </script>
+    
+</body>
+</html>

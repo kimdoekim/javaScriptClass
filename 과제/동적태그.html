@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <button onclick="ins()"> 클릭 </button>
+    <button onclick="ins2()">blue 클릭</button>
+
+    <div id="a"></div>
+
+
+    <script>
+        let a = document.getElementById('a');
+        function ins(){
+            let rb = document.createElement('div');            
+            rb.style.width = "100px";
+            rb.style.height = "100px";
+            rb.style.backgroundColor='red';
+            rb.style.border ='1px solid';
+            rb.style.marginTop = '10px';
+            a.appendChild(rb);
+            
+        }
+        function ins2(){
+            let bb = document.createElement('div');            
+            bb.style.width = "100px";
+            bb.style.height = "100px";
+            bb.style.backgroundColor='blue';
+            bb.style.border ='1px solid';
+            bb.style.marginTop = '10px';
+            a.appendChild(bb);
+            
+        }
+    </script>
+</body>
+</html>

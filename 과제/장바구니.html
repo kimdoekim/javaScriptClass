@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 500px;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black; 
+            padding: 8px; 
+        }
+        th{
+            border-bottom: 3px solid black;
+        }
+        .qty{
+            width: 50px;
+        }
+        
+    </style>
+
+    <script>
+        
+        function cal(obj){
+            let qty = obj.value;
+            let priceTD = obj.parentElement.previousElementSibling;
+            let amount = obj.parentElement.nextElementSibling;
+            let price = priceTD.innerHTML;
+            let amt = qty * price;
+            amount.innerHTML = amt;
+            total();
+        }
+        function deleteItem(){
+            let checkboxs = document.querySelectorAll(".cb");
+            for(let i = 0; i<checkboxs.length;i++ ){
+                let item = checkboxs[i];
+                if(item.checked){
+                    let tr1 = item.parentElement.parentElement;
+                    tr1.remove();
+                }
+            }
+            total();
+        }
+
+        function total(){
+            let result = document.getElementById('result');
+            let amounts = document.querySelectorAll(".amt");
+            let sum = 0;
+            for(let i = 0; i<amounts.length;i++){
+                let item = amounts[i];
+                let amount = parseInt(item.innerHTML);
+                sum+=amount;
+            }
+            result.innerHTML =`총합 : ${sum} 원`;
+        }
+        
+    </script>
+</head>
+<body onload="total()">
+    
+<table>
+    <thead>
+    <tr>
+        <th>선택</th>
+        <th>제품명</th>
+        <th>단가</th>
+        <th>수량</th>
+        <th>금액</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><input type="checkbox" class="cb"></td>
+        <td>마녀와의 7일</td>
+        <td>18800</td>
+        <td><input type="text" value="1" onkeyup="cal(this)" class="qty"></td>
+        <td class="amt">18800</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="cb"></td>
+        <td>아이가 없는 집</td>
+        <td>18000</td>
+        <td><input type="text" value="1" onkeyup="cal(this)" class="qty"></td>
+        <td class="amt">18000</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="cb"></td>
+        <td>나의 돈키호테</td>
+        <td>18000</td>
+        <td><input type="text" value="1" onkeyup="cal(this)" class="qty"></td>
+        <td class="amt">18000</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="cb"></td>
+        <td>이처럼 사소한 것들</td>
+        <td>13800</td>
+        <td><input type="text" value="1" onkeyup="cal(this)" class="qty"></td>
+        <td class="amt">13800</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="cb"></td>
+        <td>당신이 누군가를 죽였다</td>
+        <td>19800</td>
+        <td><input type="text" value="1" onkeyup="cal(this)" class="qty"></td>
+        <td class="amt">19800</td>
+    </tr>
+    </tbody>
+</table>
+<button onclick="deleteItem()">삭제</button>
+<div id="result"></div>
+
+    
+</body>
+</html>
