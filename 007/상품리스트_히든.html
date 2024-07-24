@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            width: 250px;
+            height: 300px;
+            border: 1px solid black;
+
+            position: relative;
+            /* 넘어서는 내용 보이지 않게 */
+            overflow: hidden;
+        }
+        /* 이미지 */
+        li img{
+            width: 250px;
+            height: 300px;
+        }
+
+        /* 히든영역 */
+        .hidden_wrap{
+            width: 100%;
+            background-color: antiquewhite;
+            height: 60px;
+            border: 1px solid black;
+            opacity: 0.5;
+            
+            position: absolute;
+            bottom: -60px;
+            transition: 0.5s;
+            
+        }
+        li:hover .hidden_wrap{
+            bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+    
+    <ul>
+        <li>
+            <img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791161571768.jpg">
+            <!-- 히든 영역 -->
+             <div class="hidden_wrap">ㅁㅁㅁㅁ</div>
+        </li>
+    </ul>
+</body>
+</html>
