@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap{
+            width: 1200px;
+            border: 1px solid black;
+            height: 500px;
+        }
+        header{
+            height: 100px;
+            background-color: rgb(245, 248, 248);
+            
+            position: relative;
+        }
+        #title{            
+            position: absolute;
+            left: 10px;
+            top: 20px;
+        }
+        #search{
+            width: 150px;
+            display: flex;
+            padding: 0px;
+            margin: 0px;
+            border: 1px solid gainsboro;
+            position: absolute;
+            right: 10px;
+            bottom: 20px;
+        }
+        #search input{
+            width: 130px;
+            height: 20px;
+            border: none;
+            outline: none;
+        }
+        #search_btn{
+            
+            width: 20px;
+            background-image: url(https://previews.123rf.com/images/swavo/swavo1409/swavo140900005/31571158-%EB%8F%8B%EB%B3%B4%EA%B8%B0-%EC%95%84%EC%9D%B4%EC%BD%98.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        /* nav영역 */
+        nav{
+            height: 40px;
+            padding: 20px;
+            background-color: rgb(232, 243, 243);
+        }
+
+        /* section */
+    section{
+        height: 600px;
+    }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div id="title"><img src="images/logo.png"></div>
+            <div id="search">
+                <input type="text">
+                <div id="search_btn"></div>
+            </div>
+        </header>
+        <nav></nav>
+        <section>
+            <ul>
+                <li>
+                    <img src="images/img01.png">
+                    <div>bigdata</div>
+                </li>
+            </ul>
+        </section>
+        <footer></footer>
+    </div>
+</body>
+</html>
