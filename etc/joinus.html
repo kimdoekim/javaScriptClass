@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 800px;
+            border: 1px solid rgb(227, 216, 216);
+            margin: 0 auto;
+            border-collapse: collapse;
+            font-size: 12px;
+        }
+        tr{
+            border: 1px solid rgb(227, 216, 216);    
+            line-height: 40px;
+        }
+        tr:nth-child(3), tr:nth-child(7){
+            height: 70px;
+        }
+        td{
+            margin: 0;
+        }
+        span{
+            color: red;
+        }
+        table input, table select{
+            width: 150px;
+            height: 30px;
+        }
+        table button{
+            width: 150px;
+            height: 40px;
+            border: 0px;
+        }
+        tr:nth-child(7){
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form name="frm" method="post">
+        <table>
+            <tr><caption><h1>회원가입</h1></caption></tr>
+            <tr>
+                <td>이름</td><td><input type="text" name="name" onsubmit=""></td>
+            </tr>
+            <tr>
+                <td>아이디</td><td><input type="text" name="id"><button>중복확인</button></td>
+            </tr>
+            <tr>
+                <td>비밀번호</td><td><input type="text" name="pwd"><br><span>※비밀번호는5자리이상 영문/숫자로 작성해주세요</span></td>
+            </tr>
+            <tr>
+                <td>비밀번호확인</td><td><input type="text" name="pwdC"></td>
+            </tr>
+            <tr>
+                <td>이메일</td><td><input type="text" name="email">@<input type="text" name="domain">
+                    <select onchange="setDomain()" name="op">
+                        <option value="" disabled selected>선택하세요</option>
+                        <option value="">gmail.com</option>
+                        <option value="">naver.com</option>
+                    </select><button>중복확인</button></td>
+            </tr>
+            <tr>
+                <td>학년/반</td><td><select>
+                    <option value="" disabled selected>선택하세요</option>
+                </select>학년<select><option value="" disabled selected>선택하세요</option></select>반</td>
+            </tr>
+            <tr>
+                <td colspan="2"><button onclick="">가입</button>
+                <button>취소</button></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+       
+
+        function setDomain(){
+            let frm = document.frm
+            let domain = frm.domain
+            let op = frm.op
+            let opText = op.options[op.selectedIndex].text;
+            domain.value = opText;  
+        }
+
+    </script>
+</body>
+</html>
